@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(159, 159, 243);
+}
+
+h1 {
+    font-size: 140px;
+    color: rgb(86, 110, 104);
+    text-align: center;
+    margin-top: -35px;
+    margin-bottom: 130px;
+}
+
+.center_board {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    height: 320px;
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .square {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+    }
+
+    .square:hover {
+        background-color: green;
+    }
+
+    img {
+        height: 99px;
+        width: 99px;
+    }
+
+.center_button {
+    display: flex;
+    justify-content: center;
+    height: 75px;
+}
+
+button {
+    height: 78px;
+    width: 240px;
+    background-color: rgb(128, 54, 41);
+    font-size: 45px;
+    color: blue;
+    justify-items: center;
+    border-radius: 10px;
+    margin: 40px
+}
+
+
+p {
+    background-color: green;
+    font-size: 150px;
+    color: rgb(219, 3, 3);
+    text-align: center;
+
+}
