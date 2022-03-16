@@ -37,7 +37,12 @@ let win_check = () => {
         if(board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]){
             console.log("Winner is: " + `${mark}`)
             document.getElementById("winner").innerHTML = (`${mark}` + " Won!")
-            game_over = true        }
+            game_over = true
+            mark = "X"
+            image == "<img src='images/x_mark.png'>"
+            
+            
+        }
     })
 }
 
@@ -49,7 +54,9 @@ let start_game = () => {
         "", "", ""
     ]
 
-    
+    squares.forEach((square) => {
+        square.innerHTML = ''
+    })
 
     document.getElementById('board').addEventListener('click', thing =>{
         console.log('you clicked the board')
@@ -71,7 +78,9 @@ let start_game = () => {
 })
 }
 
-// ######## remove all images on board ######
-// squares.forEach((square) => {
-//     square.innerHTML = ''
-// })
+squares.forEach((square) => {
+    square_size = square.getBoundingClientRect()
+    x_center = (square_size.left + square_size.right) /2
+    y_center = (square_size.top + square.bottom) /2
+    console.log(x_center, y_center)
+})

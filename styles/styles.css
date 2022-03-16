@@ -51,14 +51,16 @@ button {
     color: blue;
     justify-items: center;
     border-radius: 10px;
-    margin: 40px
+    margin: 40px;
+    display: flex;
+
 }
 
 
 p {
-    background-color: green;
     font-size: 150px;
     color: rgb(219, 3, 3);
     text-align: center;
-
+    height: 2px;
+    width: 100%;
 }
