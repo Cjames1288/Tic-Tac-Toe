@@ -12,11 +12,13 @@ const winning_combos = [
     [2, 4, 6]
     ];
 
+
 let mark = "X"
 let board
 let image = "<img src='images/x_mark.png'>"
 blank_image = "<img src='o_mark'>"
 let game_over = false
+
 
 let turn_change = () => {
     if(mark == "X"){
@@ -32,6 +34,7 @@ let turn_change = () => {
     }
 }
 
+
 let win_check = () => {
     winning_combos.forEach(combo => {
         if(board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]){
@@ -40,7 +43,9 @@ let win_check = () => {
             game_over = true
             mark = "X"
             image == "<img src='images/x_mark.png'>"
-            
+
+            clicked.removeEventlistener("click", start_game)
+            start_game()
             
         }
     })
@@ -58,7 +63,9 @@ let start_game = () => {
         square.innerHTML = ''
     })
 
-    document.getElementById('board').addEventListener('click', thing =>{
+    document.getElementById("winner").innerHTML = ""
+
+    let clicked = document.getElementById('board').addEventListener('click', thing =>{
         console.log('you clicked the board')
 
         if(game_over == false){
@@ -78,9 +85,11 @@ let start_game = () => {
 })
 }
 
+
 squares.forEach((square) => {
     square_size = square.getBoundingClientRect()
     x_center = (square_size.left + square_size.right) /2
     y_center = (square_size.top + square.bottom) /2
     console.log(x_center, y_center)
+
 })
